@@ -27,7 +27,7 @@ class App extends Component {
 
   handleKeyDown(e) {
     console.log(e);
-    if (e.key === "ArrowRight") {
+    if (e.key === "ArrowRight" || e.keyCode === 39) {
       const value = +this.state.ballPosition.left.split("px")[0];
 
       this.setState({ ballPosition: { left: value + 5 + "px" } });
